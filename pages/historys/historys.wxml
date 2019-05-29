@@ -1,0 +1,29 @@
+<view class='container'>
+  <view class="header"></view>
+  <view class='placeholder_header' />
+  <scroll-view class='content' scroll-y="true">
+
+    <view class='courier-infor-list'wx:for="{{courierInfor}}" wx:for-index="index" wx:for-item="item" wx:key="key" wx:if="{{index != defaut}}">
+      <view class='courier-infor-list-header'>
+        <view class="courier-infor-list-header-title" id="{{index}}" bindtap="handletap">
+          <view class='courier-com'>{{item.comName}}</view>
+          <view class='courier-nu'>{{index}}</view>
+        </view>
+        <view class="delete" bind:tap="handleOpen" id="{{index}}">删除</view>
+      </view>
+      <!-- <view class='courier-infor-list-content' id="{{index}}" bindtap="handletap"> -->
+        <!-- <view class='courier-lastInfo'>{{item.data[0].status}}</view> -->
+      <!-- </view> -->
+    </view>
+  </scroll-view>
+  <!-- <view class='ad-bar'>
+    <ad unit-id="adunit-4bfc2f101e10a922"></ad>
+  </view> -->
+</view>
+<i-modal visible="{{ visible }}" id="{{deleteId}}" bind:ok="handleDelete" bind:cancel="handleClose">
+  <view>你确定要删除这条发票信息嘛？</view>
+</i-modal>
+<i-tab-bar current="{{ current }}" color="#00a4f4" bindchange="handleChange" fixed="true">
+  <i-tab-bar-item key="index" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
+  <i-tab-bar-item key="historys" icon="time" current-icon="time_fill" title="历史记录"></i-tab-bar-item>
+</i-tab-bar>

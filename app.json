@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/content/content",
+    "pages/historys/historys",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00a4f4",
+    "navigationBarTitleText": "发票查验",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "color":"#ffffff",
+    "list":[
+      {
+        "pagePath":"pages/index/index"
+      },
+      {
+        "pagePath":"pages/historys/historys"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

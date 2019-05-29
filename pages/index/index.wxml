@@ -1,0 +1,92 @@
+<view class="container">
+  <view class="header"></view>
+  <view class="toast" style="{{permissionShow}}">
+    <view class="toast-start">继续使用查询功能需要登陆</view>
+    <view class="toast-end">
+      <button class="btn" open-type="getUserInfo" bind:tap="closeToast">
+        登录
+      </button>
+    </view>
+  </view>
+
+  <view class="userCard">
+    <view class="userCard-start">
+      <view class="userCard-avatar">
+        <image src="{{userInfo.avatarUrl}}" mode="scaleToFill"/>
+      </view>
+      <view class="userCard-nickName">{{userInfo.nickName}}</view>
+    </view>
+    <view class="userCard-end">
+      <view class="title">查询点数:{{userInfo.queryPoints}}</view>
+      <view class="subtitle" bind:tap="showVideoAd">点击获取查询点数</view>
+    </view>
+  </view>
+
+  <view class="scanningCard" bind:tap="handleScanning">
+    <view class="icon">
+      <i class="fa fa-qrcode"/>
+    </view>
+    <view class="title">扫描查验</view>
+    <view class="subtitle">
+      <i class="fa fa-chevron-right"/>
+    </view>
+  </view>
+  <view class="scanningCard" bind:tap="openInputView">
+    <view class="icon">
+      <i class="fa fa-pencil-square-o"/>
+    </view>
+    <view class="title">手动查验</view>
+    <view class="subtitle">
+      <i class="fa fa-chevron-right"/>
+    </view>
+  </view>
+
+  <view class="inputView" style="{{inputViewShow}}">
+    <form bindsubmit="formSubmit">
+      <view class="inputView-item">
+        <view class="inputView-item-start">
+          发票代码
+        </view>
+        <view class="inputView-item-end">
+            <input name="code" type="text" placeholder="请输入10位或12位的发票代码" />
+        </view>
+      </view>
+
+      <view class="inputView-item">
+        <view class="inputView-item-start">
+          发票号码
+        </view>
+        <view class="inputView-item-end">
+            <input name="number" type="text" placeholder="请输入8位发票号码"/>
+        </view>
+      </view>
+
+      <view class="inputView-item">
+        <view class="inputView-item-start">
+          开票日期
+        </view>
+        <view class="inputView-item-end">
+            <input name="date" type="text" placeholder="如:20190501"/>
+        </view>
+      </view>
+
+      <view class="inputView-item">
+        <view class="inputView-item-start">
+          校验码
+        </view>
+        <view class="inputView-item-end">
+            <input name="checkCode" type="text" placeholder="请输入校验码后六位"/>
+        </view>
+      </view>
+      <view class="button">
+<button form-type="submit" bind:tap="closeInputView">查询</button>
+       <button  bind:tap="closeInputView">返回</button>
+      </view>
+       
+    </form>
+  </view>
+</view>
+<i-tab-bar current="{{ current }}" color="#00a4f4" bindchange="handleChange" fixed="true">
+  <i-tab-bar-item key="index" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
+  <i-tab-bar-item key="historys" icon="time" current-icon="time_fill" title="历史记录"></i-tab-bar-item>
+</i-tab-bar>

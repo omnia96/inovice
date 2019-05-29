@@ -1,0 +1,149 @@
+@import "../../fonts/awesome.wxss";
+.container{
+    color: white;
+}
+.container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.header{
+    width: 100vw;
+    height: 30vw;
+    background: #00a4f4;
+    border-radius: 0 0 7vw 7vw;
+    position: fixed;
+    z-index: -1;
+}
+.icon{
+    /* font-size: 10vw; */
+    font-size: 8vw;
+    width: 10vw;
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    font-size: 16px;
+    line-height: 16px;
+}
+.subtitle{
+    font-size: 14px;
+}
+.userCard{
+    width: 80vw;
+    background-image: linear-gradient(-90deg, #9EFBD3 0%, #57E9F2 48%, #45D4FB 100%);
+    border-radius: 1vw;
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    margin-top: 20vw;
+}
+.userCard-start{
+    display: flex;
+    align-items: center;
+}
+.userCard-avatar{
+    width: 15vw;
+    height: 15vw;
+    /* background: red; */
+    border-radius: 7.5vw;
+}
+.userCard-avatar image{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 7.5vw;
+}
+.userCard-nickName{
+    margin-left: 5vw;
+}
+.userCard-end{
+    margin-top: 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.scanningCard{
+    width: 80vw;
+    /* padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw; */
+    padding: 5vw;
+    background-image: linear-gradient(-90deg, #37ecba 0%, #72afd3 100%);
+    border-radius: 1vw;
+    margin-top: 2vw;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.scanningCard .title{
+    margin-left: 5vw;
+    width: 70vw;
+}
+.scanningCard .subtitle{
+    right:0;
+}
+.toast{
+    position: fixed;
+    width: 60vw;
+    background: white;
+    bottom: 40vh;
+    border-radius: 1vw;
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #555555;
+    font-size: 16px;
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.toast-start{
+    margin-bottom: 5vw;
+}
+.inputView{
+    width: 80vw;
+    padding: 5vw;
+    position: fixed;
+    bottom: 40vh;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    display: flex;
+    color: #444444;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 1vw;
+}
+.button{
+    display: flex;
+    width: 80vw;
+    height: 10vw;
+    align-items: center;
+    margin-top: 5vw;
+}
+.inputView-item{
+    display: flex;
+    align-items: center;
+    border-bottom:1px solid #37ecba;
+    
+}
+.inputView-item-start{
+    width: 20vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: start;
+}
+.inputView-item-end{
+    display: flex;
+    align-items: center;
+}
+.inputView-item-end input{
+    width: 60vw;
+    height: 12vw;
+}
+
